@@ -184,4 +184,4 @@
       (interactive)
       (shell-command "wmctrl -r :ACTIVE: -btoggle,maximized_vert,maximized_horz"))
 (switch-full-screen)
-(set-face-attribute 'default nil :height 200)
+(set-face-attribute 'default nil :height 120)
