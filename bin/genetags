@@ -1,0 +1,1 @@
+find . -name "*.cpp" -print -o -name "*.h" -print -o -name "*.java" -print -o -name "*.cc" -print -o -name "*.mk" -print | etags -
