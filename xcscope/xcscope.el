@@ -2459,6 +2459,8 @@ using the mouse."
 	;; Add the correct database file to search
 	(setq options (cons base-database-file-name options))
 	(setq options (cons "-f" options))
+	;;mamk add -C
+	(setq options (cons "-C" options))
 	(setq cscope-output-start (point))
 	(setq default-directory cscope-directory)
 
@@ -2986,7 +2988,8 @@ C++ sources"
   (add-hook 'c-mode-hook (function cscope-minor-mode))
   (add-hook 'c++-mode-hook (function cscope-minor-mode))
   (add-hook 'dired-mode-hook (function cscope-minor-mode)))
-
+  (add-hook 'java-mode-hook (function cscope:hook))
+  (add-hook 'fundamental-mode-hook (function cscope:hook))
 (provide 'xcscope)
 
 ;;; xcscope.el ends here
