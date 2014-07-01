@@ -798,10 +798,13 @@ cscope index. These are mostly version-control directories"
   :type '(repeat string)
   :group 'cscope)
 
+;;;mamk modify this
 (defcustom cscope-indexer-suffixes '("*.[chly]"
                                      "*.[ch]xx"
                                      "*.[ch]pp"
                                      "*.cc"
+                                     "*.java"
+                                     "*.mk"
                                      "*.hh")
   "List of file suffixes to index. By default these are C, C++,
 Lex and Yacc source. These are globs accepted by 'find -iname'"
