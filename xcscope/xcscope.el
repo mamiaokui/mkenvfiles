@@ -2989,9 +2989,10 @@ Key bindings:
 C++ sources"
   (interactive)
   (add-hook 'c-mode-hook (function cscope-minor-mode))
+  (add-hook 'c-mode-common-hook (function cscope-minor-mode))
   (add-hook 'c++-mode-hook (function cscope-minor-mode))
   (add-hook 'dired-mode-hook (function cscope-minor-mode)))
-  (add-hook 'java-mode-hook (function cscope:hook))
+;;;  (add-hook 'java-mode-hook (function cscope:hook))
   (add-hook 'fundamental-mode-hook (function cscope:hook))
 (provide 'xcscope)
 
