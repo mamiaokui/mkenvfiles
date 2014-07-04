@@ -1,0 +1,1 @@
+adb forward tcp:5039 tcp:5039

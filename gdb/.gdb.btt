@@ -1,0 +1,27 @@
+#0  WebCore::DOMWindow::document (this=0x5d61b5f0) at /home/mamk/ssd/uccodenow/core/WebCore/page/DOMWindow.cpp:1621
+#1  0x62d15134 in WebCore::FrameLoader::fireBeforeUnloadEvent (this=0x5d05d478, chrome=0x5c951258) at /home/mamk/ssd/uccodenow/core/WebCore/loader/FrameLoader.cpp:3771
+#2  0x62d14f38 in WebCore::FrameLoader::shouldClose (this=0x5d05d478) at /home/mamk/ssd/uccodenow/core/WebCore/loader/FrameLoader.cpp:3745
+#3  0x62d15408 in WebCore::FrameLoader::continueLoadAfterNavigationPolicy (this=0x5d05d478, formState=..., shouldContinue=true) at /home/mamk/ssd/uccodenow/core/WebCore/loader/FrameLoader.cpp:3796
+#4  0x62d14d48 in WebCore::FrameLoader::callContinueLoadAfterNavigationPolicy (argument=0x5d05d478, request=..., formState=..., shouldContinue=true)
+    at /home/mamk/ssd/uccodenow/core/WebCore/loader/FrameLoader.cpp:3721
+#5  0x62d33f50 in WebCore::PolicyCallback::call (this=0x651cc3a8, shouldContinue=true) at /home/mamk/ssd/uccodenow/core/WebCore/loader/PolicyCallback.cpp:109
+#6  0x62d34fbc in WebCore::PolicyChecker::continueAfterNavigationPolicy (this=0x5d05d480, policy=WebCore::PolicyUse) at /home/mamk/ssd/uccodenow/core/WebCore/loader/PolicyChecker.cpp:177
+#7  0x637553c8 in WebCore::FrameLoaderClientAndroid::callPolicyFunction (this=0x5c953630, function=
+    (void (WebCore::PolicyChecker::*)(WebCore::PolicyChecker * const, WebCore::PolicyAction)) 0x62d34d74 <WebCore::PolicyChecker::continueAfterNavigationPolicy(WebCore::PolicyAction)>, action=WebCore::PolicyUse)
+    at /home/mamk/ssd/uccodenow/core/WebKit/android/share/WebCoreSupport/FrameLoaderClientAndroid.cpp:3992
+#8  0x6374bbf4 in WebCore::FrameLoaderClientAndroid::dispatchDecidePolicyForNavigationAction (this=0x5c953630, function=
+    (void (WebCore::PolicyChecker::*)(WebCore::PolicyChecker * const, WebCore::PolicyAction)) 0x62d34d74 <WebCore::PolicyChecker::continueAfterNavigationPolicy(WebCore::PolicyAction)>, action=..., request=..., 
+    formState=...) at /home/mamk/ssd/uccodenow/core/WebKit/android/share/WebCoreSupport/FrameLoaderClientAndroid.cpp:1887
+#9  0x62d348a0 in WebCore::PolicyChecker::checkNavigationPolicy (this=0x5d05d480, request=..., loader=0x5d6bd020, formState=..., 
+    function=0x62d14d00 <WebCore::FrameLoader::callContinueLoadAfterNavigationPolicy(void*, WebCore::ResourceRequest const&, WTF::PassRefPtr<WebCore::FormState>, bool)>, argument=0x5d05d478)
+    at /home/mamk/ssd/uccodenow/core/WebCore/loader/PolicyChecker.cpp:99
+#10 0x62d0ce50 in WebCore::FrameLoader::loadWithDocumentLoader (this=0x5d05d478, loader=0x5d6bd020, type=WebCore::FrameLoadTypeReload, prpFormState=...)
+    at /home/mamk/ssd/uccodenow/core/WebCore/loader/FrameLoader.cpp:1912
+#11 0x62d0d9ac in WebCore::FrameLoader::reload (this=0x5d05d478, endToEndReload=false) at /home/mamk/ssd/uccodenow/core/WebCore/loader/FrameLoader.cpp:2058
+#12 0x637197a8 in android::Reload (env=0x5ccc5630, obj=0x423cae80, allowStale=0 '\000') at /home/mamk/ssd/uccodenow/core/WebKit/android/share/jni/WebCoreFrameBridge.cpp:1409
+#13 0x408492d4 in ?? ()
+#14 0x408492d4 in ?? ()
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+#Local Variables: #
+#mode: compilation #
+#End: #
