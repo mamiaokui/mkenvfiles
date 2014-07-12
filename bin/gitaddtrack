@@ -24,7 +24,7 @@ then
     git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3_shell
 else
     echo "core"
-    echo "git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3_shell"
+    echo "git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3_core"
     git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3_core
 fi
 git config --add svn-remote.$arg.fetch $1:refs/remotes/$1
