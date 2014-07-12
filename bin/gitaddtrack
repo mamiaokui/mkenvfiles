@@ -1,0 +1,34 @@
+if [[ $1 == /* ]]
+then
+    echo "begin with /, fail"
+    exit
+fi
+
+if [[ $1 != */* ]]
+then
+    echo "format not write"
+    exit
+fi
+
+
+arg=$1
+after="_"
+arg=${arg//\//$after}
+echo $arg
+
+
+if [ -d "BrowserShell" ]
+then
+    echo "shell"
+    echo "git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3_shell"
+    git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3_shell
+else
+    echo "core"
+    echo "git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3_shell"
+    git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3_core
+fi
+git config --add svn-remote.$arg.fetch $1:refs/remotes/$1
+echo "git config --add svn-remote.$arg.fetch $1:refs/remotes/$1"
+
+git svn fetch $arg
+
