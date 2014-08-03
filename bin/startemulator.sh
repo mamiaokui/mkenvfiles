@@ -1,0 +1,1 @@
+emulator -avd `android list avd | grep "Name:" | awk '{print $2}'`
