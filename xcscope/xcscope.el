@@ -532,7 +532,7 @@ search paths for #include, similar to the -I gcc option"
   :type 'boolean
   :group 'cscope)
 
-(defcustom cscope-option-kernel-mode nil
+(defcustom cscope-option-kernel-mode t
   "The -k option in cscope: use no system-wide include paths.
 Useful for self-contained codebases, such as a kernel"
   :type 'boolean
@@ -803,6 +803,7 @@ cscope index. These are mostly version-control directories"
                                      "*.[ch]xx"
                                      "*.[ch]pp"
                                      "*.cc"
+                                     "*.c"
                                      "*.java"
                                      "*.mk"
                                      "*.hh")

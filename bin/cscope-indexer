@@ -1,4 +1,3 @@
-#! /bin/sh
 ###############################################################################
 #
 # File:         cscope-indexer
@@ -70,7 +69,7 @@
 set -e
 
 # May have to edit this:
-PATH="/usr/local/bin:/sbin:/usr/sbin:/bin:/usr/bin:$PATH"
+PATH="/bin:$PATH"
 export PATH
 
 LIST_ONLY=
@@ -156,7 +155,7 @@ then
     echo "Indexing files ..."
 fi
 
-cscope -b -i $LIST_FILE -f $DATABASE_FILE
+cscope -b  -i $LIST_FILE -f $DATABASE_FILE 
 
 if [ "X$VERBOSE" != "X" ]
 then
