@@ -10,7 +10,7 @@
 (global-set-key (kbd "M-.") 'tags-apropos)
 (global-set-key (kbd "C-c c") 'new-c-o)
 (global-set-key (kbd "C-c r") 'new-tags-aprops)
-(global-set-key (kbd "C-m") 'set-mark-command)
+(global-set-key (kbd "M-m") 'set-mark-command)
 ;;; I prefer cmd key for meta
 (setq mac-option-key-is-meta nil
       mac-command-key-is-meta t
@@ -18,8 +18,8 @@
 (setq mac-command-modifier 'meta)
 ;;;must mode
 (ido-mode)
+(global-linum-mode)
 (transient-mark-mode t)
-;;;(global-linum-mode t)
 (require 'uniquify)
 ;;;(load-file "/usr/share/emacs/site-lisp/xcscope.el")
 (add-to-list 'load-path "~/mkenvfiles/")

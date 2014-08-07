@@ -3,3 +3,4 @@
 echo "add ~/mkenvfile/bin to PATH"
 echo "add mount disk to configure file"
 echo "use gnome-tweak-tool to set caps as ctrl"
+echo "if this is MAC and what to use gdb, can add s permission to gdb and chown it as root"
