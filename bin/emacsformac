@@ -1,4 +1,4 @@
 #for linux
 #/usr/bin/emacs $@ &
 #for mac
-/Applications/Emacs.app/Contents/MacOS/Emacs "$@" &
+/Applications/Emacs.app/Contents/MacOS/Emacs "$@"
