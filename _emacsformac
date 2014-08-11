@@ -191,3 +191,4 @@
 (setq exec-path (cons "~/mkenvfiles/bin" exec-path ))
 (setq exec-path (append exec-path '("~/mkenvfiles/bin")))
 (setenv "PATH" (concat (getenv "PATH") ":~/mkenvfiles/bin"))
+(toggle-frame-fullscreen)
