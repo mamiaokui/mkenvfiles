@@ -1,1 +1,35 @@
-emacsformac
+#!/usr/bin/python
+import os
+import sys
+currentPath = os.getcwd()
+command = "/Applications/Emacs.app/Contents/MacOS/Emacs"
+firstItem = True;
+
+def parse():
+    global firstItem
+    global command
+    if (len(sys.argv) == 1):
+        command += " " + currentPath
+        return
+    for i in sys.argv:
+        if (firstItem):
+            firstItem = False
+            continue
+            
+        if (i == "&"):
+            continue
+
+        if ((not i.startswith("-")) and (not i.startswith("/"))):
+            argPath =""
+            argPath +=" " + currentPath + "/" + i
+            command += argPath
+        else:
+            command += " " + i + " "
+
+
+
+parse()
+
+
+command += " &"    
+os.system(command)
