@@ -2994,6 +2994,8 @@ C++ sources"
   (add-hook 'c++-mode-hook (function cscope-minor-mode))
   (add-hook 'dired-mode-hook (function cscope-minor-mode))
   (add-hook 'gud-mode-hook (function cscope-minor-mode))
+  (add-hook 'shell-mode-hook (function cscope-minor-mode))
+  (add-hook 'apropos-mode-hook (function cscope-minor-mode))
   (add-hook 'fundamental-mode-hook (function cscope-minor-mode)))
 ;;;  (add-hook 'java-mode-hook (function cscope:hook))
 
