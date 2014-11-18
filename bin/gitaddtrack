@@ -22,10 +22,21 @@ then
     echo "shell"
     echo "git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3_shell"
     git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3_shell
-else
+elif [ -d "v8" ]
+then
     echo "core"
     echo "git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3_core"
     git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3_core
+elif [ -d "sdk-android" ]
+then
+    echo "r2d2"
+    echo "git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3player"
+    git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3player
+elif [ -d "openssl-android" ]
+then
+    echo "ffmpeg"
+    echo "git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3player_core"
+    git config --add svn-remote.$arg.url https://pkg6.ucweb.local/svn/u3player_core
 fi
 git config --add svn-remote.$arg.fetch $1:refs/remotes/$1
 echo "git config --add svn-remote.$arg.fetch $1:refs/remotes/$1"
