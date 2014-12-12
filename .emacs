@@ -1,6 +1,6 @@
 ;;;must key
 (global-set-key (kbd "M-h") (lambda () (interactive) (find-file "~/.emacs")))
-(global-set-key (kbd "M-SPC") 'set-mark-command)
+(global-set-key (kbd "M-m") 'set-mark-command)
 (global-set-key (kbd "C-x k") (lambda () (interactive) (kill-buffer (current-buffer))))
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-c g") 'gdb-many-windows)
@@ -10,6 +10,10 @@
 (global-set-key (kbd "M-.") 'tags-apropos)
 (global-set-key (kbd "C-c c") 'new-c-o)
 (global-set-key (kbd "C-c r") 'new-tags-aprops)
+(global-set-key (kbd "C-x C-p") 'pop-global-mark)
+(global-set-key (kbd "M-n") 'forward-list)
+(global-set-key (kbd "M-p") 'backward-list)
+(global-set-key (kbd "C-x f") 'find-name-dired)
 
 ;;;must mode
 (ido-mode)
@@ -17,10 +21,11 @@
 (global-linum-mode t)
 (require 'uniquify)
 ;;;(load-file "/usr/share/emacs/site-lisp/xcscope.el")
-(add-to-list 'load-path "~/mkenvfiles/")
-(add-to-list 'load-path "~/mkenvfiles/xcscope/")
-(load-file "~/mkenvfiles/xcscope/xcscope.el")
+(add-to-list 'load-path "~/mkenvfile/")
+(add-to-list 'load-path "~/mkenvfile/xcscope/")
+(load-file "~/mkenvfile/xcscope/xcscope.el")
 (require 'xcscope)
+(cscope-setup)
 (setq uniquify-buffer-name-style 'reverse)
 
 ;;;must UI
@@ -157,6 +162,7 @@
    nil 0 nil "_NET_WM_STATE" 32
    '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
 )
+;启动时最大化
 ;(set-face-attribute 'default nil :height 110)
 (setq frame-title-format '((:eval default-directory)))
 (setq-default indent-tabs-mode nil)
@@ -173,8 +179,8 @@
 
 (fset 'new-tags-aprops
    [?\C-\M-b ?\C-  ?\C-\M-f ?\M-w ?\M-x ?t ?a ?g ?s ?- ?a ?p ?r ?o ?p ?o ?s return ?\C-y return])
-(add-to-list 'load-path "~/mkenvfiles/color-theme/")
-(load-file "~/mkenvfiles/color-theme/color-theme.el")
+(add-to-list 'load-path "~/mkenvfile/color-theme/")
+(load-file "~/mkenvfile/color-theme/color-theme.el")
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-clarity)
@@ -183,3 +189,4 @@
       (shell-command "wmctrl -r :ACTIVE: -btoggle,maximized_vert,maximized_horz"))
 (switch-full-screen)
 (set-face-attribute 'default nil :height 120)
+(setq find-name-arg "-iname")
