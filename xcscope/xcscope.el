@@ -2993,7 +2993,7 @@ C++ sources"
   (add-hook 'c-mode-common-hook (function cscope-minor-mode))
   (add-hook 'c++-mode-hook (function cscope-minor-mode))
   (add-hook 'java-mode-hook (function cscope-minor-mode))
-  (add-hook 'fundamental-mode-hook (function cscope-minor-mode))
+;  (add-hook 'fundamental-mode-hook (function cscope-minor-mode))
   (add-hook 'shell-mode-hook (function cscope-minor-mode))
   (add-hook 'lisp-interaction-mode-hook (function cscope-minor-mode))
   (add-hook 'dired-mode-hook (function cscope-minor-mode)))
