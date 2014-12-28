@@ -2996,6 +2996,7 @@ C++ sources"
 ;  (add-hook 'fundamental-mode-hook (function cscope-minor-mode))
   (add-hook 'shell-mode-hook (function cscope-minor-mode))
   (add-hook 'lisp-interaction-mode-hook (function cscope-minor-mode))
+  (add-hook 'occur-mode-hook (function cscope-minor-mode))
   (add-hook 'dired-mode-hook (function cscope-minor-mode)))
 (provide 'xcscope)
 
