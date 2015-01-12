@@ -1,0 +1,8 @@
+define gobt  
+  set logging file .gdb.btt  
+  set logging overwrite on  
+  set logging redirect on  
+  set logging on  
+  bt  
+  set logging off  
+end
