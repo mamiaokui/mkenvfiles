@@ -21,9 +21,9 @@
 (global-linum-mode t)
 (require 'uniquify)
 ;;;(load-file "/usr/share/emacs/site-lisp/xcscope.el")
-(add-to-list 'load-path "~/mkenvfile/")
-(add-to-list 'load-path "~/mkenvfile/xcscope/")
-(load-file "~/mkenvfile/xcscope/xcscope.el")
+(add-to-list 'load-path "~/mkenvfiles/")
+(add-to-list 'load-path "~/mkenvfiles/xcscope/")
+(load-file "~/mkenvfiles/xcscope/xcscope.el")
 (require 'xcscope)
 (cscope-setup)
 (setq uniquify-buffer-name-style 'reverse)
@@ -179,8 +179,8 @@
 
 (fset 'new-tags-aprops
    [?\C-\M-b ?\C-  ?\C-\M-f ?\M-w ?\M-x ?t ?a ?g ?s ?- ?a ?p ?r ?o ?p ?o ?s return ?\C-y return])
-(add-to-list 'load-path "~/mkenvfile/color-theme/")
-(load-file "~/mkenvfile/color-theme/color-theme.el")
+(add-to-list 'load-path "~/mkenvfiles/color-theme/")
+(load-file "~/mkenvfiles/color-theme/color-theme.el")
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-clarity)
