@@ -2639,7 +2639,9 @@ indexer"
                     ")"
 
                     ;; accept files and symlinks
-                    "(" "-type" "f" "-o" "-type" "l" ")"
+                    ;;"(" "-type" "f" "-o" "-type" "l" ")"
+                    ;;mamk change this
+                    "(" "-type" "f" ")"
 
                     ;; if we made it here, take the result
                     "-print"))))
