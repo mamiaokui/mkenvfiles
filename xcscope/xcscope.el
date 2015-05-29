@@ -2639,7 +2639,7 @@ indexer"
                     ")"
 
                     ;; accept files and symlinks
-                    "(" "-type" "f" "-o" "-type" "l" ")"
+                    "(" "-type" "f" ")"
 
                     ;; if we made it here, take the result
                     "-print"))))
