@@ -1,0 +1,3 @@
+PATH=~/mkenvfiles/bin:$PATH
+export NDK_PATH=/home/mamk/tools/android-ndk-r10d/
+export NDK_CCACHE=ccache
