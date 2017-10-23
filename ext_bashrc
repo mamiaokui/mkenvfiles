@@ -1,5 +1,7 @@
-PATH=~/mkenvfiles/bin:$PATH
-export NDK_PATH=/home/mamk/tools/android-ndk-r10d/
+export NDK_PATH=/Users/mamk/tools/android-ndk-r14b/
 export NDK_CCACHE=ccache
-source ~/mkenvfiles/git-completion.bash
-export PS1="\u:\w$ "
+PATH=~/mkenvfiles/bin:$NDK_PATH:$PATH:/Users/mamk/Library/Android/sdk/platform-tools:/Applications/kdiff3.app/Contents/MacOS
+source ~/mkenvfiles/.git-completion.bash
+export ANDROID_NDK=$NDK_PATH
+export PS1='[\u@\h] \w\$ '
+

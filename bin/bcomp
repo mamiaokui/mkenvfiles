@@ -10,22 +10,16 @@ if platform.system() == "Linux":
     shell = "/usr/bin/emacs "
     platformArgv = " -mm "
 elif platform.system() == "Darwin":
-    shell = "/Applications/Emacs.app/Contents/MacOS/Emacs "
-    platformArgv = " -geometry 202x61 "
+    shell = "/Applications/beyondcompare.app/Contents/MacOS/bcomp "
 
 if len(sys.argv) == 1:
-    argv = "."
+    argv = " "
 else:
     for i in range(1, len(sys.argv)):
         argv += sys.argv[i] + " "
 
-shell = shell + platformArgv + argv 
+shell = shell + platformArgv + argv
 
-pid = os.fork()
-if pid == 0:
-    os.system(shell)
-else:
-    time.sleep(1)
-    
-            
-        
+os.system("rm /Users/mamk/Library/Application\ Support/Beyond\ Compare/registry.dat")
+
+os.system(shell)
