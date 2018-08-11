@@ -1,3 +1,5 @@
 PATH=~/mkenvfiles/bin:$PATH
 export NDK_PATH=/home/mamk/tools/android-ndk-r10d/
 export NDK_CCACHE=ccache
+source ~/mkenvfiles/git-completion.bash
+export PS1="\u:\w$ "    
