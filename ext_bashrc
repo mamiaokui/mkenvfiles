@@ -1,7 +1,31 @@
-export NDK_PATH=/Users/mamk/tools/android-ndk-r14b/
+export NDK_PATH=/Users/mamk/tools/android-ndk-r10e/
+export ANDROID_HOME=/Users/mamk/Library/Android/sdk/
+export ANDROID_NDK_HOME=$NDK_PATH    
 export NDK_CCACHE=ccache
-PATH=~/mkenvfiles/bin:$NDK_PATH:$PATH:/Users/mamk/Library/Android/sdk/platform-tools:/Applications/kdiff3.app/Contents/MacOS
+PATH=~/mkenvfiles/bin:$NDK_PATH:$PATH:/Users/mamk/Library/Android/sdk/platform-tools:/Applications/kdiff3.app/Contents/MacOS:/Users/mamk/tools/gradle-2.14.1/bin
+PATH=$PATH:/Users/mamk/tools/rar/
 source ~/mkenvfiles/.git-completion.bash
 export ANDROID_NDK=$NDK_PATH
 export PS1='[\u@\h] \w\$ '
 
+<<<<<<< Updated upstream
+=======
+# Mac默认 JDK 6（Mac默认自带了一个jdk6版本）  
+#export JAVA_6_HOME=`/usr/libexec/java_home -v 1.6`  
+# 设置 JDK 7  
+#export JAVA_7_HOME=`/usr/libexec/java_home -v 1.7`  
+# 设置 JDK 8  
+export JAVA_8_HOME=`/usr/libexec/java_home -v 1.8`  
+  
+#默认JDK 6  
+export JAVA_HOME=$JAVA_6_HOME  
+  
+#alias命令动态切换JDK版本  
+#alias jdk6="export JAVA_HOME=$JAVA_6_HOME"  
+#alias jdk7="export JAVA_HOME=$JAVA_7_HOME"  
+alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
+jdk8
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+>>>>>>> Stashed changes
