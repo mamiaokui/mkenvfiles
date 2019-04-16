@@ -8,8 +8,6 @@ source ~/mkenvfiles/.git-completion.bash
 export ANDROID_NDK=$NDK_PATH
 export PS1='[\u@\h] \w\$ '
 
-<<<<<<< Updated upstream
-=======
 # Mac默认 JDK 6（Mac默认自带了一个jdk6版本）  
 #export JAVA_6_HOME=`/usr/libexec/java_home -v 1.6`  
 # 设置 JDK 7  
@@ -28,4 +26,3 @@ jdk8
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
->>>>>>> Stashed changes
