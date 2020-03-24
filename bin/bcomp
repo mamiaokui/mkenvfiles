@@ -10,7 +10,7 @@ if platform.system() == "Linux":
     shell = "/usr/bin/emacs "
     platformArgv = " -mm "
 elif platform.system() == "Darwin":
-    shell = "/Applications/beyondcompare.app/Contents/MacOS/bcomp "
+    shell = "/Applications/Beyond\ Compare.app/Contents/MacOS/bcomp "
 
 if len(sys.argv) == 1:
     argv = " "

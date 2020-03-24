@@ -1,0 +1,7 @@
+[diff]
+	tool = custom
+[difftool "custom"]
+    cmd = \"/Users/mamk/mkenvfiles/bin/bcomp\" \"$LOCAL\" \"$REMOTE\"    
+[user]
+	name = miaokui.mmk
+	email = miaokui.mmk@alibaba-inc.com

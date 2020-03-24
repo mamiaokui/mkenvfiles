@@ -1,4 +1,6 @@
-export NDK_PATH=/Users/mamk/tools/android-ndk-r10e/
+#export NDK_PATH=/Users/mamk/tools/android-ndk-r14b/
+export NDK_PATH=/Users/mamk/Library/Android/sdk/ndk-bundle/
+export NDK=$NDK_PATH
 export ANDROID_HOME=/Users/mamk/Library/Android/sdk/
 export ANDROID_NDK_HOME=$NDK_PATH    
 export NDK_CCACHE=ccache
