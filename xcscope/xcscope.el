@@ -804,6 +804,8 @@ cscope index. These are mostly version-control directories"
                                      "*.[ch]pp"
                                      "*.cc"
                                      "*.c"
+                                     "*.m"
+                                     "*.mm"
                                      "*.java"
                                      "*.mk"
                                      "*.hh")
